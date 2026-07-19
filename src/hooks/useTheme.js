@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 // Intentionally does not persist to localStorage; the theme resets to
 // light on every fresh load, which keeps this component side-effect free.
 export function useTheme() {
-  const [isDark, setIsDark] = useState(false);
-
+  const [isDark, setIsDark] = useState(true);
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
